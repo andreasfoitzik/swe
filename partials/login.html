@@ -1,0 +1,80 @@
+<!-- Custom styles for this template -->
+<style type="text/css">
+
+    body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #eee;
+    }
+
+    .form-signin {
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+    .form-signin .form-signin-heading,
+    .form-signin .checkbox {
+        margin-bottom: 10px;
+    }
+    .form-signin .checkbox {
+        font-weight: normal;
+    }
+    .form-signin .form-control {
+        position: relative;
+        height: auto;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .form-signin .form-control:focus {
+        z-index: 2;
+    }
+    .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+</style>
+
+
+
+
+<div class="container">
+
+    <form class="form-signin">
+
+        <script type="text/ng-template" id="wrongLogin">
+
+            <div class="bs-example" style="width:350px; margin:auto; align:center;">
+                <div class="alert alert-warning">
+                    <a href="" class="close" data-dismiss="alert">&times;</a>
+                    <strong>Warning!</strong>
+                    <br/>
+                    Falscher Benutzername oder falsches Passwort!
+                </div>
+            </div>
+
+        </script>
+
+        <img src="img/Containerbasis.png" width="100%" />
+        <br/><br/>
+        <h2 class="form-signin-heading" align="center"> <!-- Anfragen-Tool --></h2>
+        <br/><br/>
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input class="form-control" ng-model="user.name" id="inputUsername"placeholder="Username" required autofocus>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input class="form-control" ng-model="user.password" type="password" id="inputPassword" placeholder="Password" required>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="login()">Sign in</button>
+    </form>
+
+</div>
